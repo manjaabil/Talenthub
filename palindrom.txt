@@ -1,0 +1,17 @@
+fun main() {
+    print("Masukkan kata: ")
+    val input = readLine()?.toLowerCase()
+    if (isPalindrome(input)) {
+        println("Kata '$input' adalah palindrom.")
+    } else {
+        println("Kata '$input' bukan palindrom.")
+    }
+}
+
+fun isPalindrome(input: String?): Boolean {
+    if (input.isNullOrEmpty()) {
+        return false
+    }
+    val reversedInput = input.reversed()
+    return input == reversedInput
+}
